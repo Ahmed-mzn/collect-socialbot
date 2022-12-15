@@ -37,16 +37,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             ));
         if($result){
             $_SESSION['msg'] = "تمت إضافة المستخدم بنجاح";
-            echo "<script> location.replace('/boot/admin/users.php');</script>";
+            echo "<script> location.replace('/admin/users.php');</script>";
             $dont_unset = 1;
         } else {
             $_SESSION['msg_error'] = "حدث خطأ ما. أعد المحاولة من فضلك!";
-            echo "<script> location.replace('/boot/admin/users.php');</script>";
+            echo "<script> location.replace('/admin/users.php');</script>";
             $dont_unset = 1;
         }
     } else {
         $_SESSION['msg_error'] = $msg_error;
-        echo "<script> location.replace('/boot/admin/users.php');</script>";
+        echo "<script> location.replace('/admin/users.php');</script>";
         $dont_unset = 1;
     }
 }
@@ -62,11 +62,11 @@ if(isset($_GET['delete_user_id'])){
 
     if($result){
         $_SESSION['msg'] = "تم حذف المستخدم بنجاح";
-        echo "<script> location.replace('/boot/admin/users.php');</script>";
+        echo "<script> location.replace('/admin/users.php');</script>";
         $dont_unset = 1;
     } else {
         $_SESSION['msg_error'] = "حدث خطأ ما. أعد المحاولة من فضلك!";
-        echo "<script> location.replace('/boot/admin/users.php');</script>";
+        echo "<script> location.replace('/admin/users.php');</script>";
         $dont_unset = 1;
     }
 }

@@ -35,16 +35,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             ));
         if($result){
             $_SESSION['msg'] = "تمت إضافة المتجر بنجاح";
-            echo "<script> location.replace('/boot/admin/clients.php');</script>";
+            echo "<script> location.replace('/admin/clients.php');</script>";
             $dont_unset = 1;
         } else {
             $_SESSION['msg_error'] = "حدث خطأ ما. أعد المحاولة من فضلك!";
-            echo "<script> location.replace('/boot/admin/clients.php');</script>";
+            echo "<script> location.replace('/admin/clients.php');</script>";
             $dont_unset = 1;
         }
     } else {
         $_SESSION['msg_error'] = $msg_error;
-        echo "<script> location.replace('/boot/admin/clients.php');</script>";
+        echo "<script> location.replace('/admin/clients.php');</script>";
         $dont_unset = 1;
     }
 }
@@ -59,11 +59,11 @@ if(isset($_GET['delete_client_id'])){
 
     if($result){
         $_SESSION['msg'] = "تم حذف المتجر بنجاح";
-        echo "<script> location.replace('/boot/admin/clients.php');</script>";
+        echo "<script> location.replace('/admin/clients.php');</script>";
         $dont_unset = 1;
     } else {
         $_SESSION['msg_error'] = "حدث خطأ ما. أعد المحاولة من فضلك!";
-        echo "<script> location.replace('/boot/admin/clients.php');</script>";
+        echo "<script> location.replace('/admin/clients.php');</script>";
         $dont_unset = 1;
     }
 }

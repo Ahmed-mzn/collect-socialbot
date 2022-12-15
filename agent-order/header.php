@@ -5,7 +5,7 @@ session_start();
 
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION["permission"] != 'agent-order'){
-    header("location: /boot/");
+    header("location: /");
     exit;
 }
 ?>
@@ -24,60 +24,60 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION[
 		<title> سوشيال بوت </title>
 
 		<!-- Favicon -->
-		<link rel="icon" href="/boot/assets/img/brand/favicon.png" type="image/x-icon"/>
+		<link rel="icon" href="/assets/img/brand/favicon.png" type="image/x-icon"/>
 
 		<!-- Icons css -->
-		<link href="/boot/assets/css/icons.css" rel="stylesheet">
+		<link href="/assets/css/icons.css" rel="stylesheet">
 
 		<!--  bootstrap css-->
-		<link href="/boot/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
 		<!-- INTERNAL Data table css -->
-		<link href="/boot/assets/plugins/datatable/css/dataTables.bootstrap5.css" rel="stylesheet" />
-		<link href="/boot/assets/plugins/datatable/css/buttons.bootstrap5.min.css"  rel="stylesheet">
-		<link href="/boot/assets/plugins/datatable/responsive.bootstrap5.css" rel="stylesheet" />
+		<link href="/assets/plugins/datatable/css/dataTables.bootstrap5.css" rel="stylesheet" />
+		<link href="/assets/plugins/datatable/css/buttons.bootstrap5.min.css"  rel="stylesheet">
+		<link href="/assets/plugins/datatable/responsive.bootstrap5.css" rel="stylesheet" />
 
 		<!--  Right-sidemenu css -->
-		<link href="/boot/assets/plugins/sidebar/sidebar.css" rel="stylesheet">
+		<link href="/assets/plugins/sidebar/sidebar.css" rel="stylesheet">
 
 		<!-- P-scroll bar css-->
-		<link href="/boot/assets/plugins/perfect-scrollbar/p-scrollbar.css" rel="stylesheet" />
+		<link href="/assets/plugins/perfect-scrollbar/p-scrollbar.css" rel="stylesheet" />
 
 		<!--Bootstrap-datepicker css-->
-		<link rel="stylesheet" href="/boot/assets/plugins/bootstrap-datepicker/bootstrap-datepicker.css">
+		<link rel="stylesheet" href="/assets/plugins/bootstrap-datepicker/bootstrap-datepicker.css">
 
 		<!--Internal  Datetimepicker-slider css -->
-		<link href="/boot/assets/plugins/amazeui-datetimepicker/css/amazeui.datetimepicker.css" rel="stylesheet">
-		<link href="/boot/assets/plugins/jquery-simple-datetimepicker/jquery.simple-dtpicker.css" rel="stylesheet">
-		<link href="/boot/assets/plugins/pickerjs/picker.min.css" rel="stylesheet">
+		<link href="/assets/plugins/amazeui-datetimepicker/css/amazeui.datetimepicker.css" rel="stylesheet">
+		<link href="/assets/plugins/jquery-simple-datetimepicker/jquery.simple-dtpicker.css" rel="stylesheet">
+		<link href="/assets/plugins/pickerjs/picker.min.css" rel="stylesheet">
 
 		<!-- Internal Spectrum-colorpicker css -->
-		<link href="/boot/assets/plugins/spectrum-colorpicker/spectrum.css" rel="stylesheet">
+		<link href="/assets/plugins/spectrum-colorpicker/spectrum.css" rel="stylesheet">
 
 		<!--  colorpicker css -->
-		<link href="/boot/assets/plugins/colorpicker/themes/nano.min.css" rel="stylesheet">
-		<link href="/boot/assets/plugins/colorpicker/themes/monolith.min.css" rel="stylesheet">
-		<link href="/boot/assets/plugins/colorpicker/themes/classic.min.css" rel="stylesheet">
+		<link href="/assets/plugins/colorpicker/themes/nano.min.css" rel="stylesheet">
+		<link href="/assets/plugins/colorpicker/themes/monolith.min.css" rel="stylesheet">
+		<link href="/assets/plugins/colorpicker/themes/classic.min.css" rel="stylesheet">
 
 		<!-- style css -->
-		<link href="/boot/assets/css/style.css" rel="stylesheet">
-		<link href="/boot/assets/css/style-dark.css" rel="stylesheet">
-		<link href="/boot/assets/css/style-transparent.css" rel="stylesheet">
+		<link href="/assets/css/style.css" rel="stylesheet">
+		<link href="/assets/css/style-dark.css" rel="stylesheet">
+		<link href="/assets/css/style-transparent.css" rel="stylesheet">
 
 		<!-- INTERNAL Select2 css -->
-		<link href="/boot/assets/plugins/select2/css/select2.min.css" rel="stylesheet" />
+		<link href="/assets/plugins/select2/css/select2.min.css" rel="stylesheet" />
 
 		<!---Skinmodes css-->
-		<link href="/boot/assets/css/skin-modes.css" rel="stylesheet" />
+		<link href="/assets/css/skin-modes.css" rel="stylesheet" />
 
 		<!--- Animations css-->
-		<link href="/boot/assets/css/animate.css" rel="stylesheet">
+		<link href="/assets/css/animate.css" rel="stylesheet">
 
 		<!---Internal  Owl Carousel css-->
-		<link href="/boot/assets/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+		<link href="/assets/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
 		
 		<!--Internal   Notify -->
-		<link href="/boot/assets/plugins/notify/css/notifIt.css" rel="stylesheet"/>
+		<link href="/assets/plugins/notify/css/notifIt.css" rel="stylesheet"/>
 
 		<!-- Popover -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/5.1.0/introjs.min.css" integrity="sha512-iaYE9B9u4GU8+KkRTOdRdZuzKdYw1X0hOAa4GwDV/uwdXgoX/ffT3ph1+HG1m4LPZD/HV+dkuHvWFLZtPviylQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -89,7 +89,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION[
 
 		<!-- Loader -->
 		<div id="global-loader">
-			<img src="/boot/assets/img/loader.svg" class="loader-img" alt="Loader">
+			<img src="/assets/img/loader.svg" class="loader-img" alt="Loader">
 		</div>
 		<!-- /Loader -->
 
@@ -103,8 +103,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION[
 						<div class="main-header-left ">
 							<div class="responsive-logo">
 								<a href="index.html" class="header-logo">
-									<img src="/boot/assets/img/brand/logo.png" class="mobile-logo logo-1" alt="logo">
-									<img src="/boot/assets/img/brand/logo-white.png" class="mobile-logo dark-logo-1" alt="logo">
+									<img src="/assets/img/brand/logo.png" class="mobile-logo logo-1" alt="logo">
+									<img src="/assets/img/brand/logo-white.png" class="mobile-logo dark-logo-1" alt="logo">
 								</a>
 							</div>
 							<div class="app-sidebar__toggle" data-bs-toggle="sidebar">
@@ -113,8 +113,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION[
 							</div>
 							<div class="logo-horizontal">
 								<a href="index.html" class="header-logo">
-									<img src="/boot/assets/img/brand/logo.png" class="mobile-logo logo-1" alt="logo">
-									<img src="/boot/assets/img/brand/logo-white.png" class="mobile-logo dark-logo-1" alt="logo">
+									<img src="/assets/img/brand/logo.png" class="mobile-logo logo-1" alt="logo">
+									<img src="/assets/img/brand/logo-white.png" class="mobile-logo dark-logo-1" alt="logo">
 								</a>
 							</div>
 						</div>
@@ -132,18 +132,18 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION[
 										</a>
 										</li>
 										<li class="dropdown main-profile-menu nav nav-item nav-link ps-lg-2">
-										<a class="new nav-link profile-user d-flex" href="" data-bs-toggle="dropdown"><img alt="" src="/boot/assets/img/faces/2.jpg" class=""></a>
+										<a class="new nav-link profile-user d-flex" href="" data-bs-toggle="dropdown"><img alt="" src="/assets/img/faces/2.jpg" class=""></a>
 										<div class="dropdown-menu">
 										<div class="menu-header-content p-3 border-bottom">
 										<div class="d-flex wd-100p">
-										<div class="main-img-user"><img alt="" src="/boot/assets/img/faces/2.jpg" class=""></div>
+										<div class="main-img-user"><img alt="" src="/assets/img/faces/2.jpg" class=""></div>
 										<div class="ms-3 my-auto">
 										<h6 class="tx-15 font-weight-semibold mb-0"><?php echo $_SESSION['full_name'];?></h6><span class="dropdown-title-text subtext op-6  tx-12"><?php echo $_SESSION['full_name'];?></span>
 										</div>
 										</div>
 										</div>
 										<a class="dropdown-item" href="index.php"><i class="far fa-user-circle"></i> الملف الشخصي</a>
-										<a class="dropdown-item" href="/boot/logout.php"><i class="far fa-arrow-alt-circle-left"></i> خروج</a>
+										<a class="dropdown-item" href="/logout.php"><i class="far fa-arrow-alt-circle-left"></i> خروج</a>
 										</div>
 										</li>
 									</ul>
@@ -159,10 +159,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION[
 					<aside class="app-sidebar">
 						<div class="main-sidebar-header active">
 							<a class="header-logo active" href="index.html">
-								<img src="/boot/assets/img/brand/logo.png" class="main-logo  desktop-logo" alt="logo">
-								<img src="/boot/assets/img/brand/logo-white.png" class="main-logo  desktop-dark" alt="logo">
-								<img src="/boot/assets/img/brand/favicon.png" class="main-logo  mobile-logo" alt="logo">
-								<img src="/boot/assets/img/brand/favicon-white.png" class="main-logo  mobile-dark" alt="logo">
+								<img src="/assets/img/brand/logo.png" class="main-logo  desktop-logo" alt="logo">
+								<img src="/assets/img/brand/logo-white.png" class="main-logo  desktop-dark" alt="logo">
+								<img src="/assets/img/brand/favicon.png" class="main-logo  mobile-logo" alt="logo">
+								<img src="/assets/img/brand/favicon-white.png" class="main-logo  mobile-dark" alt="logo">
 							</a>
 						</div>
 						<div class="main-sidemenu">
